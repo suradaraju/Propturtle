@@ -1,0 +1,347 @@
+/* Invest/Construction Services Section */
+
+.invest-services__header {
+  margin-bottom: 50px;
+}
+
+.smart-p {
+  color: #1B2B5A;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.invest-services__tagline {
+  color: #666;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.invest-services__title {
+  color: #1B2B5A;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+/* Card Design */
+.invest-card {
+  /* height: 380px; */
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  overflow: visible;
+  /* Allow content to overlap */
+  transition: transform 0.3s ease;
+}
+
+.row-feature {
+  display: flex;
+  margin-top: 300px;
+}
+
+.invest-card__image-wrapper {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  border-radius: 20px 20px 40px 40px;
+  /* Slight curve at bottom */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.invest-card__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.invest-card:hover .invest-card__image-wrapper img {
+  transform: scale(1.1);
+}
+
+/* Curved Shape at bottom of image */
+.invest-card__image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+}
+
+.invest-card__content {
+  background: #fff;
+  width: 85%;
+  margin: -60px auto 0;
+  /* Float up overlapping the image */
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  height: 290px;
+}
+
+.invest-card__icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.invest-card__icon img,
+.invest-card__icon svg,
+.invest-card__icon i {
+  width: 100%;
+  height: auto;
+  fill: #1B2B5A;
+  color: #1B2B5A;
+  transition: all 0.3s ease;
+}
+
+/* Icon Animation on Hover */
+@keyframes iconWobble {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.2) rotate(-5deg);
+  }
+
+  30% {
+    transform: scale(1.2) rotate(5deg);
+  }
+
+  45% {
+    transform: scale(1.2) rotate(-3deg);
+  }
+
+  60% {
+    transform: scale(1.2) rotate(3deg);
+  }
+
+  75% {
+    transform: scale(1.2) rotate(-1deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.invest-card:hover .invest-card__icon i,
+.invest-card:hover .invest-card__icon svg {
+  color: #CBA36B !important;
+  animation: iconWobble 1s ease;
+}
+
+.invest-card:hover .invest-card__icon {
+  transform: translateY(-5px);
+}
+
+.invest-card__title {
+  color: #042e43;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.invest-card__text {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.invest-card__link {
+  display: inline-block;
+  color: #042e43;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-bottom: 2px solid #042e43;
+  padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.invest-card__link:hover {
+  color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* --- Mobile Responsiveness for Features --- */
+/* ===========================
+   MOBILE FIXED HORIZONTAL CARD SLIDER (SIDE BY SIDE)
+   =========================== */
+@media (max-width: 991px) {
+
+  /* === CRITICAL: prevent parent clipping === */
+  .invest-services,
+  .invest-services .container,
+  .invest-services .row,
+  .row-feature {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  /* === Horizontal scroll container === */
+  .row-feature {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 20px !important;
+    padding: 90px 35px 60px !important;
+    /* bottom padding prevents shadow cut */
+    margin-top: 50px !important;
+    align-items: stretch;
+  }
+
+  /* Hide scrollbar */
+  .row-feature::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* === Each slide/card column === */
+  /* .row-feature > div {
+    flex: 0 0 85% !important;
+    max-width: 0% !important;
+    scroll-snap-align: center;
+    display: flex;
+  } */
+
+
+  /* === Card wrapper === */
+  .invest-card {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+    overflow: visible !important;
+    display: flex;
+
+  }
+
+  /* === Card content === */
+  .invest-card__content {
+    width: 100% !important;
+    min-height: 280px !important;
+    padding: 30px 22px !important;
+    margin: 0 !important;
+    border-radius: 20px !important;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible !important;
+  }
+
+  /* Hide image on mobile */
+  .invest-card__image-wrapper {
+    display: none !important;
+  }
+
+  /* === Text sizes === */
+  .invest-card__title {
+    font-size: 20px !important;
+    margin-bottom: 12px !important;
+    color: #1B2B5A;
+    margin-left: -10px;
+  }
+
+  .invest-card__text {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+    margin-left: -10px;
+    color: #555;
+  }
+
+  /* Section header spacing fix */
+  .invest-services__header {
+    padding-bottom: 20px !important;
+    margin-bottom: 0 !important;
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  /* Force same size card */
+  .row-feature>div {
+    flex: 0 0 280px !important;
+    max-width: 280px !important;
+    /* min-width: 280px !important; */
+    height: auto !important;
+    min-height: 300px !important;
+    display: flex;
+    scroll-snap-align: center;
+  }
+
+  .invest-card {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+  }
+
+  .invest-card__content {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: unset !important;
+    max-height: unset !important;
+    padding: 24px 20px !important;
+    border-radius: 20px !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  /* Prevent text from breaking layout */
+  .invest-card__text {
+    overflow: visible;
+    display: block;
+    /* max 4 lines */
+    /* -webkit-line-clamp: 4; */
+    /* -webkit-box-orient: vertical; */
+  }
+
+}
+@media (min-width: 1200px) and (max-width:1400px){
+  .row-feature{
+     flex: 0 0 280px !important;
+    /* max-width: 280px !important; */
+    /* min-width: 280px !important; */
+    height: auto !important;
+    min-height: 300px !important;
+    display: flex;
+  }
+  .invest-card{
+     width: 100% !important;
+    height: 90% !important;
+    display: flex;
+  }
+  .invest-card__title{
+    white-space: nowrap;
+  }
+}

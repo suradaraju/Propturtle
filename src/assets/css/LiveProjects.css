@@ -1,0 +1,451 @@
+.live-projects {
+  padding: 80px 0;
+  background: #faf8f4;
+}
+
+.project-card {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 100px;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.project-media {
+  width: 55%;
+}
+
+.project-media video {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* .project-thumbs {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+} */
+
+.project-thumbs img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RIGHT */
+.project-info {
+  width: 45%;
+}
+
+.builder-tag {
+  color: #d49a3a;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.project-info h2 {
+  font-size: 38px;
+  margin: 12px 0;
+  color: #1A2B5A;
+}
+
+.location {
+  color: #1A2B5A;
+  opacity: 0.9;
+  margin-bottom: 18px;
+}
+
+.description {
+  color: #1A2B5A;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 35px 0;
+}
+
+.stat-box h4 {
+  color: #d49a3a;
+  font-size: 22px;
+  /* white-space: nowrap; */
+}
+
+.stat-box span {
+  white-space: nowrap;
+  font-size: 14px;
+  color: #1A2B5A;
+}
+
+.price {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.status {
+  background: #e1a74a;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  width: fit-content;
+}
+.project-main-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.live-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.view-btn-li {
+  background: #aa7536;
+  border: none;
+  color: #fff;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  width: 30%;
+}
+
+.view-btn-li:hover {
+  background: #c99032;
+}
+
+/* Zig-zag alternating layout */
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Fix spacing & alignment for reversed cards */
+.project-card.reverse .project-info {
+  text-align: left;
+}
+
+/* Optional: align button properly */
+.project-card.reverse .view-btn-li {
+  align-self: flex-start;
+}
+
+/* Better vertical rhythm */
+.project-card {
+  align-items: center;
+}
+
+.investment-type {
+  font-size: 28px;
+  font-weight: 500;
+  color: #cfa35a;
+  margin: 30px 0 14px 0;
+}
+.project-thumbs-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.project-thumbs-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: thumbs-scroll 20s linear infinite;
+}
+
+.project-thumbs-track img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Animation */
+@keyframes thumbs-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  .live-projects{
+    padding-bottom: 1px !important;
+  }
+  .project-card {
+    flex-direction: column;
+  }
+.project-card {
+    flex-direction: column;
+  }
+
+  .project-card.reverse {
+    flex-direction: column;
+  }
+  .project-media,
+  .project-info {
+    width: 100%;
+  }
+  .project-info h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a2b5a;
+  }
+  .location{
+    color: #1a2b5a;
+    opacity: 0.9;
+  }
+  .project-media video {
+    height: 260px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .description{
+    color: #1A2B5A;
+  }
+  .view-btn-li {
+    width: 100%;
+  }
+  .project-main-image{
+    height: 50%;
+  }
+  .stat-box h4 {
+    font-size: 18px;
+    /* font-weight: 600; */
+  }
+  .investment-type{
+    font-size: 18px;
+  }
+  .view-btn-li{
+    width: 50%;
+    white-space: nowrap;
+    padding: 10px;
+  }
+}
+
+
+/* Marquee bar */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 50px;
+  margin-bottom: 24px;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-item {
+  background: #e1a74a;
+  color: white;
+  padding: 10px 32px;
+  border-radius: 40px;
+  margin-right: 14px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Progress wrapper */
+.progress-wrapper {
+  margin: 18px 0 26px 0;
+}
+
+/* Bar container */
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height:20px;
+  background: #f1e3c8;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/* Filled part */
+.progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #e1a74a, #f0c06b);
+  border-radius: 50px;
+  animation: fillAnim 1.6s ease-out forwards;
+}
+
+/* Text INSIDE bar */
+.progress-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 16px;
+  /* font-weight: 600; */
+  color: white;
+  z-index: 2;
+  pointer-events: none;
+  padding: 10px
+}
+
+@keyframes fillAnim {
+  from {
+    width: 0%;
+  }
+}
+
+
+
+
+.progress-bar {
+  position: relative;
+  background: #eee;
+  height: 28px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  /* background: linear-gradient(90deg, #4caf50, #2e7d32); */
+  background: #aa7536;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+/* .progress-amount {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+} */
+
+.progress-text {
+  margin-top: 6px;
+  display: block;
+  font-size: 13px;
+  color: #555;
+}
+
+
+.progress-wrapper {
+  margin-top: 18px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 38px;
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #b6843a, #d4a85a);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  white-space: nowrap;
+}
+
+/* LEFT TEXT (Limited Inventory) */
+.progress-text-left {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* RIGHT TEXT (₹6.5 Crores) */
+.progress-amount-right {
+  /* position: absolute; */
+  right: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+.progress-wrapper {
+  margin-top: 18px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 38px;
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Filled progress */
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #b6843a, #d4a85a);
+  border-radius: 20px;
+  transition: width 0.6s ease;
+}
+
+/* LEFT TEXT */
+.progress-text-left {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 2;
+}
+
+/* RIGHT TEXT */
+.progress-amount-right {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  z-index: 2;
+}
+
+@media(max-width: 900px){
+  .progress-text-left{
+    font-size: 10px;
+  }
+}

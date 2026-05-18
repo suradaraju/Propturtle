@@ -1,0 +1,69 @@
+.trusted-brands {
+  padding: 60px 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+  position: relative;
+}
+
+.trusted-brands::after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 50px auto 0;
+}
+
+.trusted-brands h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #1a2b5a;
+}
+
+.brands-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 10px; */
+  /* flex-wrap: wrap; */
+}
+
+.brand-logo {
+   padding-left: 55px;
+  padding-right: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand-logo img {
+  max-height: 80px;
+  max-width: 180px;
+  object-fit: contain;
+  /* filter: grayscale(100%); */
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+
+.brand-logo img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brands-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* gap: 30px; */
+  }
+
+  .brand-logo {
+    padding-left: 10px;
+    padding: 10px;
+  }
+}

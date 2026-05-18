@@ -1,0 +1,131 @@
+.pt-navbar {
+  position: absolute;
+  top: 20px;
+  /* bottom: 80px; */
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 9999;
+  
+    background: transparent;
+  backdrop-filter: none;
+  
+}
+
+/* CONTAINER */
+.pt-navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.pt-navbar-logo img {
+  height: 80px;
+  width: auto;
+
+}
+
+/* MENU */
+.pt-navbar-menu {
+  display: flex;
+  gap: 34px;
+  margin-left: 290px;
+}
+
+.pt-navbar-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: opacity 0.25s ease;
+}
+
+.pt-navbar-menu a:hover {
+  opacity: 0.7;
+}
+
+/* BUTTON */
+.pt-navbar-btn {
+  background: #ffffff;
+  color: #162b5b;
+  padding: 14px 34px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.pt-navbar-btn:hover {
+  background: #f2f2f2;
+  transform: translateY(-1px);
+}
+
+/* SPACING FIX FOR PAGE */
+/* body {
+  padding-top: 90px;
+} */
+
+/* MOBILE */
+@media (max-width: 1000px) {
+  .pt-navbar-menu {
+    display: none;
+  }
+}
+
+/* ===== DROPDOWN ===== */
+
+.pt-navbar-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.pt-navbar-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: #0f274f;
+  border-radius: 8px;
+  padding: 8px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+/* Show dropdown on hover */
+.pt-navbar-dropdown:hover .pt-navbar-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown links */
+.pt-navbar-dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Hover effect */
+.pt-navbar-dropdown-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Optional: small arrow */
+.pt-navbar-dropbtn::after {
+  content: " ▾";
+  font-size: 12px;
+}

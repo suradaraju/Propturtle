@@ -1,0 +1,274 @@
+.leadership-section {
+    padding: 100px 0;
+    background-color: #f7f9fc;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional background decoration */
+.leadership-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#e1e8f0 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.leadership-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.leadership-header h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1b2b5a;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+.leadership-header p {
+    font-size: 18px;
+    color: #556070;
+    line-height: 1.8;
+}
+
+.leaders-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.leader-card {
+    background: #ffffff;
+    border-radius: 12px;
+    /* Slightly softer for modern look */
+    overflow: hidden;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(197, 162, 93, 0.3);
+    /* Gold tint on hover */
+}
+
+/* Image Wrapper for Zoom Effect */
+.leader-image-wrapper {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+}
+.iim-raj{
+    width: 10%;
+    margin-left: 10px;
+    margin-top: 20px;
+    /* padding-bottom: 15px;
+    border-bottom: 2px solid rgba(197, 162, 93, 0.2);
+     display: flex;
+    flex-direction: row;
+    gap: 30px;
+   
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(197, 162, 93, 0.2); */
+}
+.rk{
+    width: 20%;
+    height: 20%;
+    margin-left: 10px;
+    margin-top: 22px;
+}
+.ceo-brands{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    /* justify-content: space-between; */
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(197, 162, 93, 0.2);
+}
+/* .ceo-brands img{
+    width: 15%;
+    height: 10%;
+} */
+ .ebg{
+    width: 10%;
+    /* height: px; */
+    margin-top: 5px;
+ }
+ .ebg-realty{
+    height: 30px;
+    width: 15%;
+ }
+ .raj-isb{
+    width: 10%;
+    height: 20px;
+    margin-top: 20px;
+   margin-left: 10px;
+ }
+
+.carlton{
+    width: 35px;
+    height: 25px;
+}
+.acer{
+    width: 30px;
+    height: 15px !important;
+    margin-top: 9px;
+}
+.daewoo{
+    width: 15%;
+    height: 30%;
+    margin-top: 9px;
+}
+.leader-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    /* Focus on faces */
+    transition: transform 0.6s ease;
+}
+.leader-image1{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+    transition: transform 1s ease;
+}
+.leader-card:hover .leader-image {
+    transform: scale(1.05);
+    /* Subtle zoom */
+}
+.leader-card:hover .leader-image1{
+    transform: scale(1.05);
+}
+/* Card Content Overlay / Padding */
+.leader-content {
+    padding: 35px;
+}
+
+.leader-card h3 {
+    font-size: 26px;
+    color: #0F1E38;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.leader-role {
+    display: inline-block;
+    font-size: 14px;
+    color: #C5A25D;
+    /* Luxury Gold */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    /* padding-bottom: 15px; */
+    /* border-bottom: 2px solid rgba(197, 162, 93, 0.2); */
+    width: 100%;
+}
+
+.leader-role-raj{
+        display: inline-block;
+    font-size: 14px;
+    color: #C5A25D;
+    /* Luxury Gold */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    /* margin-bottom: 20px; */
+    padding-bottom: 25px;
+    border-bottom: 2px solid rgba(197, 162, 93, 0.2);
+    width: 100%;
+}
+.leader-desc {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* List Styling */
+.leader-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.leader-card ul li {
+    font-size: 15px;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.leader-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+.leader-card ul li::before {
+    content: "✓";
+    /* Checkmark instead of bullet for positive reinforcement */
+    color: #C5A25D;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.leader-card ul li b {
+    color: #1b2b5a;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .leadership-header h2 {
+        font-size: 32px;
+    }
+
+    .leaders-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leader-image-wrapper {
+        height: 280px;
+    }
+    .leader-desc{
+        /* text-align: justify !important; */
+    }
+    .ebg-realty{
+    height: 10%;
+   }
+    .iim-raj{
+        width: 20%;
+    }
+    .raj-isb{
+        width: 20%;
+    }
+
+}
